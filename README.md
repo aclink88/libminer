@@ -4,6 +4,8 @@
 # libminer
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/aclink88/libminer/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/aclink88/libminer/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of libminer is to provide an overview of your R library setup.
@@ -28,24 +30,24 @@ optionally with the toal sizes, use `lib_summary()`.
 library(libminer)
 
 lib_summary()
-#>                                                                 library
-#> 1                                    C:/Program Files/R/R-4.3.1/library
-#> 2                        C:/Users/aclin/AppData/Local/R/win-library/4.3
-#> 3 C:/Users/aclin/AppData/Local/Temp/RtmpaMmBJV/temp_libpath83dc741c3a65
+#>                                                                library
+#> 1                                   C:/Program Files/R/R-4.3.1/library
+#> 2                       C:/Users/aclin/AppData/Local/R/win-library/4.3
+#> 3 C:/Users/aclin/AppData/Local/Temp/RtmpaMmBJV/temp_libpath83dc5ba65af
 #>   n_packages
 #> 1         30
 #> 2        223
 #> 3          1
 # specify sizes = True
 lib_summary(sizes=TRUE)
-#>                                                                 library
-#> 1                                    C:/Program Files/R/R-4.3.1/library
-#> 2                        C:/Users/aclin/AppData/Local/R/win-library/4.3
-#> 3 C:/Users/aclin/AppData/Local/Temp/RtmpaMmBJV/temp_libpath83dc741c3a65
+#>                                                                library
+#> 1                                   C:/Program Files/R/R-4.3.1/library
+#> 2                       C:/Users/aclin/AppData/Local/R/win-library/4.3
+#> 3 C:/Users/aclin/AppData/Local/Temp/RtmpaMmBJV/temp_libpath83dc5ba65af
 #>   n_packages  lib_size
 #> 1         30  68858812
 #> 2        223 490257466
-#> 3          1     13575
+#> 3          1     17317
 ```
 
 What is special about using `README.Rmd` instead of just `README.md`?
