@@ -23,14 +23,19 @@ lib_summary <- function(sizes = FALSE) {
   names(pkg_df) <- c("library","n_packages")
 
   if (sizes) {
-    pkg_df$lib_size <- vapply(
-      pkg_df$library,
-      function(x) {
-        sum(fs::file_size(fs::dir_ls(x, recurse=TRUE)))
-      },
-      FUN.VALUE = numeric(1)
-    )
+    pkg_df <- calculate_sizes(pkg_df)
   }
 
   pkg_df
 }
+
+calculate_sizes <- function(df) {
+  df$lib_size <- map_dbl(
+    df$library,
+    ~ sum(fs::file_size(fs::dir_ls(recurse=TRUE)))
+  )
+  df
+}
+
+
+
