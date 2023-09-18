@@ -29,6 +29,13 @@ lib_summary <- function(sizes = FALSE) {
   pkg_df
 }
 
+#' calculate sizes
+#'
+#' @param df a dataframe of libraries
+#'
+#' @noRd make it so user doesn't get documentation for a function that they won't see
+#'
+#'@return a `data.frame` with a lib_size column
 calculate_sizes <- function(df) {
   df$lib_size <- map_dbl(
     df$library,

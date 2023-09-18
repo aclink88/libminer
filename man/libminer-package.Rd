@@ -12,6 +12,7 @@ Provides files for learning about your own libraries, and the packages they cont
 Useful links:
 \itemize{
   \item \url{https://github.com/aclink88/libminer}
+  \item \url{https://aclink88.github.io/libminer/}
   \item Report bugs at \url{https://github.com/aclink88/libminer/issues}
 }
 
