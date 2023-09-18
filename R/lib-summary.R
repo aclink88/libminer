@@ -32,7 +32,7 @@ lib_summary <- function(sizes = FALSE) {
 calculate_sizes <- function(df) {
   df$lib_size <- map_dbl(
     df$library,
-    ~ sum(fs::file_size(fs::dir_ls(recurse=TRUE)))
+    ~ sum(fs::file_size(fs::dir_ls(.x, recurse=TRUE)))
   )
   df
 }
